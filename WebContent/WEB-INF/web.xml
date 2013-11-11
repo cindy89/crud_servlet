@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>crud_servlet</display-name>
+ <!--用于向servlet容器声明，定义了一个servlet-->
+ <servlet>
+ 		<servlet-name>servlet-one</servlet-name><!--servlet别名，任意-->
+ 		<servlet-class>gyh.servlet.HelloServlet</servlet-class>	<!--完整类名-->
+ </servlet>
+ <servlet>
+ 	 	<servlet-name>selectbook</servlet-name>
+ 	    <servlet-class>gyh.servlet.SelectBook</servlet-class>
+ </servlet>
+ <servlet>
+ 	<servlet-name>addbook</servlet-name>
+    <servlet-class>gyh.servlet.AddBook</servlet-class>
+ </servlet>
+ <servlet>
+ 	<servlet-name>updatebook</servlet-name>
+ 	<servlet-class>gyh.servlet.UpdateBook</servlet-class>
+ </servlet>
+ <servlet>
+ 	<servlet-name>deletebook</servlet-name>
+ 	<servlet-class>gyh.servlet.DeleteBook</servlet-class>
+ </servlet>
+ <servlet>
+ 	<servlet-name>addmethod</servlet-name>
+ 	<servlet-class>gyh.servlet.AddMethod</servlet-class>
+ </servlet>
+ <servlet>
+ 	<servlet-name>updatemethod</servlet-name>
+ 	<servlet-class>gyh.servlet.UpdateMethod</servlet-class>
+ </servlet>
+ 
+ <!--定义某个servlet的访问路径-->
+  <servlet-mapping>
+  		<servlet-name>servlet-one</servlet-name>
+  	    <url-pattern>/hello</url-pattern><!-- 指定了webroot后的servlet的路径（访问路径） -->
+  </servlet-mapping>
+  <servlet-mapping>
+  		<servlet-name>selectbook</servlet-name>
+  	    <url-pattern>/selectbook</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+  		<servlet-name>addbook</servlet-name>
+  		<url-pattern>/addbook</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+  		<servlet-name>updatebook</servlet-name>
+  		<url-pattern>/updatebook</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+  		<servlet-name>deletebook</servlet-name>
+  		<url-pattern>/deletebook</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>addmethod</servlet-name>
+  	<url-pattern>/add</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>updatemethod</servlet-name>
+  	<url-pattern>/update</url-pattern>
+  </servlet-mapping>
+  
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
